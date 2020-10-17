@@ -15,6 +15,22 @@ function reduce(arr, func, sp) {
 }
 
 
+// function reduce(arr, func, sp) {
+//     let sum = sp ? sp : arr[0]
+//     // let sum = sp
+//     arr.forEach(n => sum = func(n, sum))
+//     return sum
+// }  works for every test but 'reduce returns a running total when not given a starting point'
+
+// function reduce(arr, func, sp) {
+//     let sum = sp ? sp : arr
+//     // let sum = sp
+//     arr.forEach(n => sum = func(n, sum))
+//     return sum
+// }  works for every test but 'reduce returns true when all values are true'
+
+
+
 // describe("reduce returns true when all values are true", function() {
 //     it("reduces correctly", function(){
 //       sourceArray = [1, 2, true, "razmatazz"]
