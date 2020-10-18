@@ -7,11 +7,15 @@ function map(arr, func) {
 
 function reduce(arr, func, sp) {
     let sum = sp ? sp : arr[0]
-    // let sum = sp
-    arr.forEach(n => sum = func(n, sum))
-    if (sum === 7) {return --sum}
-    else {
-    return sum}
+    let i = (!!sp) ? 0 : 1
+    for (; i < arr.length; i++){
+        sum = func(arr[i], sum)
+    }
+    // arr.forEach(n => sum = func(n, sum))
+    // if (sum === 7) {return --sum}
+    // else {
+    return sum
+    // }
 }
 
 
@@ -23,7 +27,7 @@ function reduce(arr, func, sp) {
 // }  works for every test but 'reduce returns a running total when not given a starting point'
 
 // function reduce(arr, func, sp) {
-//     let sum = sp ? sp : arr
+//     let sum = sp ? sp : 0
 //     // let sum = sp
 //     arr.forEach(n => sum = func(n, sum))
 //     return sum
@@ -49,3 +53,10 @@ function reduce(arr, func, sp) {
   
 //     return r;
 //   }
+
+
+// > s = false
+// false
+// > i = !!s ? 0: 1
+// 1
+// if starting point is undefined, r will be first element of array and i will be 1
